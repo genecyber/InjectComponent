@@ -5,8 +5,8 @@ function activate(tag){
         //nFocus(".iframe").colorbox({html: "<p>foo</p>"})
         nFocus(".iframe").colorbox()
     })    
-    console.log("accompanying script loaded")
-    nFocus(document).on("click", ".formButton", function() {
-        return false
-    })
+    console.log("accompanying script loaded...")
+    setTimeout(()=>{
+        nFocus(".iframe").click(()=>{nFocus.colorbox({rel:".iframe"})})
+    }, 500)
 }
