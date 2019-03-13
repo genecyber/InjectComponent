@@ -71,7 +71,7 @@ var loadCss;
         var url = window.location.href
         var filename = url.match(/.*\/(.*)$/)[1];
         var absolutePath = url.replace(filename, '')
-        if (absolutePath.includes('file://') || absolutePath.includes('localhost'), absolutePath.includes('127.0')) {
+        if (absolutePath.includes('file://') || absolutePath.includes('localhost') || absolutePath.includes('127.0')) {
             absolutePath = "//genecyber.github.io/InjectComponent/"
         }
         return absolutePath
