@@ -26,6 +26,9 @@ var loadCss;
     loadScript = function loadScript(src, onLoad) {
         var script_tag = document.createElement('script');
         script_tag.setAttribute("type", "text/javascript");
+        if (window.location.href && !url.substring(0, 8).includes('//')) {
+            src = getAbsolutePath() + src
+        }
         script_tag.setAttribute("src", src);
  
         if (script_tag.readyState) {
@@ -45,6 +48,9 @@ var loadCss;
         var link_tag = document.createElement('link');
         link_tag.setAttribute("type", "text/css");
         link_tag.setAttribute("rel", "stylesheet");
+        if (window.location.href && !href.substring(0, 8).includes('//')) {
+            href = getAbsolutePath() + href
+        }
         link_tag.setAttribute("href", href);
         (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(link_tag);
     }
@@ -59,6 +65,13 @@ var loadCss;
     function initjQuery() {
         nFocus = window.jQuery.noConflict(true);
         main();
+    }
+
+    function getAbsolutePath() {
+        var url = window.location.href
+        var filename = url.match(/.*\/(.*)$/)[1];
+        var absolutePath = url.replace(filename, '')
+        return absolutePath
     }
  
     /******** starting point for your widget ********/
