@@ -70,7 +70,7 @@ var loadCss;
             if (tpls.length < 1)
                 return;
 			loadScript("//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js", function() {
-				loadScript("./js/inject.js", function() { init(initWorker,tpls); });
+				loadScript("js/inject.js", function() { init(initWorker,tpls); });
 			});
         });
         function initWorker(sources,tags) {
