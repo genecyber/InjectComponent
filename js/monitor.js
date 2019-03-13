@@ -7,6 +7,7 @@ function activate(tag){
     })    
     console.log("accompanying script loaded...")
     setTimeout(()=>{
+        alert(0)
         nFocus(".iframe").click(()=>{nFocus.colorbox({rel:".iframe"})})
     }, 500)
 }
