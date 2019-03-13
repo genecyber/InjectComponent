@@ -24,12 +24,12 @@ var loadCss;
     
     /******** helper function to load external scripts *********/
     loadScript = function loadScript(src, onLoad) {
-        var script_tag = document.createElement('script');
-        script_tag.setAttribute("type", "text/javascript");
-        if (window.location.href && !url.substring(0, 8).includes('//')) {
+        var script_tag = document.createElement('script')
+        script_tag.setAttribute("type", "text/javascript")
+        if (window.location.href && !src.substring(0, 8).includes('//')) {
             src = getAbsolutePath() + src
         }
-        script_tag.setAttribute("src", src);
+        script_tag.setAttribute("src", src)
  
         if (script_tag.readyState) {
             script_tag.onreadystatechange = function () {
