@@ -104,7 +104,7 @@ var loadCss;
 			
 		}
         function renderTemplate(tpl, cb, tplTag) {
-			loadCss("//static.scripting.com/github/bootstrap2/css/bootstrap.css");
+			loadCss("http://static.scripting.com/github/bootstrap2/css/bootstrap.css");
 			loadCss("//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
             nFocus("."+tplTag.attributes["data-target"].value).html(tpl);
             cb(tplTag)
