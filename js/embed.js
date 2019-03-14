@@ -129,5 +129,4 @@ var loadCss;
 			console.log("Embed complete")
 		}
     }
- 
-})();
+})()

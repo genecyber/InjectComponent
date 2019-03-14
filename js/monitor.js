@@ -1,12 +1,10 @@
 function activate(tag){
     loadCss("./js/colorbox-master/example1/colorbox.css")
     loadScript("./js/colorbox-master/jquery.colorbox.js", function(){
-        //nFocus(".iframe").colorbox({iframe:true, width:"50%", height:"50%", scrolling: false});
-        //nFocus(".iframe").colorbox({html: "<p>foo</p>"})
-        nFocus(".iframe").colorbox()
-    })    
+        //nFocus(".iframe").colorbox({href: 'order.html'})
+    })
     console.log("accompanying script loaded...")
     setTimeout(()=>{
-        nFocus(".iframe").click(()=>{nFocus.colorbox({rel:".iframe"})})
+        nFocus(".iframe").click(()=>{nFocus.colorbox({href: 'order.html'})})
     }, 500)
 }
